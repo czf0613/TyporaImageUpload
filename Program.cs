@@ -78,7 +78,7 @@ async ValueTask<string> UploadSingleFile(string filePath)
         var contentLength = await fileStream.ReadAsync(memoryHolder.Memory);
 
         // 组装一个Http请求
-        using var request = new HttpRequestMessage(HttpMethod.Put, $"https://cos.kevinc.ltd/file/upload?fileId={fileMetaData.Id}&seqNumber={i + 1}");
+        using var request = new HttpRequestMessage(HttpMethod.Put, $"https://tcp-cos.kevinc.ltd:8080/file/upload?fileId={fileMetaData.Id}&seqNumber={i + 1}");
         request.Content = new ReadOnlyMemoryContent(memoryHolder.Memory[..contentLength]);
         using var resp = await httpClient.SendAsync(request);
 
