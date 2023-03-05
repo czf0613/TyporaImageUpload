@@ -19,7 +19,7 @@ namespace TestClient
         /// </summary>
         public string FileNameWithExt { get; set; } = "file.unknown";
 
-        public long FileSize { get; set; } = 0L;
+        public ulong FileSize { get; set; } = 0UL;
 
         /// <summary>
         /// 后端为了减轻储存压力，会把那些已经存在的数据进行重复引用
@@ -67,6 +67,6 @@ namespace TestClient
 
     public class UploadFileReply
     {
-        public long NextRequestedFrame { get; set; } = 0L;
+        public ulong NextRequestedFrame { get; set; } = 0UL;
     }
 }
