@@ -5,7 +5,7 @@ Typora is a very useful markdown editor, and now we have a free image uploader f
 
 It is free to use this upload tool because we want more people to know us.
 
-But, the free version only allow you to upload a file that is no more than 10MB, if you need advanced help, please contact us.
+But, do not use this free version for any business purpose, which cannot guarantee your full support and data security.
 
 ## Global CDN
 
@@ -13,26 +13,25 @@ KCos is using high quality CDN provided by the AliCloud. That can ensure a low l
 
 ## Cross Platform
 
-This upload tool is built for many popular platforms statically, which means that you can use it without any external libraries. (That's why the binary file seems large)
+This upload tool is built for many popular platforms statically, which means that you can use it without any external libraries. (That's why the binary file seems large) Most of the platforms are supported by Dotnet Runtime, except Apple Devices. 
 
-But unfortunately, the Apple Silicon is not yet supported because the build tools we are using is out of date. We promise that we will solve this problem later with the AOT Binary File.
+So, in this project, you can find out the Dotnet version in the Dotnet Folder. By the way, a pure Swift implementation is also provided in the Swift Folder.
 
 Supported platforms are as follows:
 
-| Platform                              | Supporting | Build Pass                                          |
-| ------------------------------------- | ---------- | --------------------------------------------------- |
-| Early Windows(Like 8.1, 7, Vista, XP) | Nope       | Nope                                                |
-| any 32 bit platforms(Like arm, x86)   | Nope       | Nope                                                |
-| Early macOS(before 10.15)             | Nope       | Pass but not fully tested.                          |
-| macOS(after 10.15) x64 arch           | Yes        | Yes                                                 |
-| macOS Apple Silicon                   | Yes        | Failed for some reasons, it will be provided later. |
-| many-linux-arm64                      | Yes        | Yes                                                 |
-| many-linux-x64                        | Yes        | Yes                                                 |
-| Modern Windows(10 or later) x64 arch  | Yes        | Yes                                                 |
-| Modern Windows(10 or later) x86 arch  | Nope       | We don't support any 32 bit platform.               |
-| Windows 10 on arm                     | Nope       | Does not support x64 simulation.                    |
-| Windows 11 arm64 arch                 | Yes        | Yes, it is native build, not the x64 translation.   |
-| Windows Server x64                    | Yes        | Yes                                                 |
+| Platform                               | Supporting | Build Pass                                        |
+| -------------------------------------- | ---------- | ------------------------------------------------- |
+| Early Windows(Like 8.1, 7, Vista, XP)  | Nope       | Nope                                              |
+| any 32 bit platforms(Like arm v7, x86) | Nope       | Nope                                              |
+| Early macOS(before 11)                 | Nope       | Nope. It does not support Swift byte code.        |
+| macOS(after 11) x64 arch               | Yes        | Yes                                               |
+| macOS Apple Silicon                    | Yes        | Yes                                               |
+| many-linux-arm64                       | Yes        | Yes                                               |
+| many-linux-x64                         | Yes        | Yes                                               |
+| Modern Windows(10 or later) x64 arch   | Yes        | Yes                                               |
+| Windows 10 on arm                      | Nope       | Does not support x64 simulation.                  |
+| Windows 11 arm64 arch                  | Yes        | Yes, it is native build, not the x64 translation. |
+| Windows Server x64                     | Yes        | Yes                                               |
 
 
 
